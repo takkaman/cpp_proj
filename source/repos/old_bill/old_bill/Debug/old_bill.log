@@ -1,0 +1,3 @@
+﻿  old_bill.cpp
+c:\workspace\learning\cpp\source\repos\old_bill\old_bill\old_bill.cpp(14): warning C4101: 'bill': unreferenced local variable
+  old_bill.vcxproj -> C:\workspace\learning\cpp\source\repos\old_bill\Debug\old_bill.exe
