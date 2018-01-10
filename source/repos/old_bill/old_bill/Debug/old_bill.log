@@ -1,4 +1,3 @@
-﻿  stdafx.cpp
-  old_bill.cpp
-c:\workspace\learning\cpp_proj\source\repos\old_bill\old_bill\old_bill.cpp(14): warning C4101: 'bill': unreferenced local variable
+﻿  old_bill.cpp
+c:\workspace\learning\cpp_proj\source\repos\old_bill\old_bill\old_bill.cpp(34): warning C4018: '<': signed/unsigned mismatch
   old_bill.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\old_bill\Debug\old_bill.exe
