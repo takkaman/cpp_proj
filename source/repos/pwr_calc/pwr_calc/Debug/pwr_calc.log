@@ -1,0 +1,4 @@
+﻿  pwr_calc.cpp
+d:\work\projects\cpp_proj\source\repos\pwr_calc\pwr_calc\pwr_calc.cpp(24): warning C4018: “<”: 有符号/无符号不匹配
+d:\work\projects\cpp_proj\source\repos\pwr_calc\pwr_calc\pwr_calc.cpp(36): warning C4018: “<”: 有符号/无符号不匹配
+  pwr_calc.vcxproj -> D:\work\projects\cpp_proj\source\repos\pwr_calc\Debug\pwr_calc.exe
