@@ -1,2 +1,2 @@
 # cpp_proj
-cpp repo
+cpp 'algorithm' repo
