@@ -1,0 +1,3 @@
+﻿  freckles.cpp
+c:\workspace\learning\cpp_proj\source\repos\freckles\freckles\freckles.cpp(60): warning C4018: '<': signed/unsigned mismatch
+  freckles.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\freckles\Debug\freckles.exe
