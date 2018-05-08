@@ -33,7 +33,7 @@ public:
 			}
 		}
 		// init vecrot and index map
-		iToV = new Vert[numV];
+		iToV = new Vertex*[numV];
 		for (int i = 0; i < numV; i++) {
 			iToV[i] = new Vertex();
 		}
@@ -110,8 +110,7 @@ public:
 private:
 	int numV;
 	int numE;
-	typedef Vertex* Vert;
-	Vert *iToV;
+	Vertex** iToV;
 };
 
 class ShortestPath {
