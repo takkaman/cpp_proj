@@ -22,7 +22,7 @@ typedef struct ShortestPaths {
 * Returns 'ShortestPaths' structure with the required information
 * (i.e. 'distance' array, 'predecessor' arrays, source and no_of_nodes in the graph)
 */
-ShortestPaths dijkstra(Graph, Vertex);
+//ShortestPaths dijkstra(Graph, Vertex);
 
 
 void  showShortestPaths(ShortestPaths);
