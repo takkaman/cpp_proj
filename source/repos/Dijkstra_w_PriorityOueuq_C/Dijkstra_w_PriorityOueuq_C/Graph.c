@@ -14,29 +14,72 @@ Graph newGraph(int noNodes) {
 	}
 	return g;
 }
-//
-//void insertEdge(Graph g, Vertex src, Vertex dest, int weight) {
-//	adjListNode d, *p;
-//	p = &g->adj[src];
-//	d.w = dest;
-//	d.weight = weight;
-//	while (p->next != NULL) {
-//		p = p->next;
-//	}
-//	p->next = &d;
-//}
-//void removeEdge(Graph g, Vertex src, Vertex dest);
-//bool adjacent(Graph g, Vertex src, Vertex dest);
+
+void insertEdge(Graph g, Vertex src, Vertex dest, int weight) {
+	// wrong method
+	//adjListNode d, *p;
+	//p = &g->adj[src];
+	//d.w= dest;
+	//d.weight = weight;
+	//d.next = NULL;
+	//while (p->next != NULL) {
+	//	p = p->next;
+	//}
+	//p->next = &d;
+
+	// correct method
+	AdjList d, p;
+	d = malloc(sizeof(adjListNode));
+	p = &g->adj[src];
+	d->w = dest;
+	d->weight = weight;
+	d->next = NULL;
+	while (p->next != NULL) {
+		p = p->next;
+	}
+	p->next = d;
+}
+
+void removeEdge(Graph g, Vertex src, Vertex dest) {
+	AdjList p, tmp;
+	p = &g->adj[src];
+	while (p->next->w != dest) {
+		p = p->next;
+	}
+	tmp = p->next;
+	p->next = p->next->next;
+	free(tmp);
+}
+bool adjacent(Graph g, Vertex src, Vertex dest) {
+	AdjList p = &g->adj[src];
+	while (p != NULL) {
+		if (p->w == dest) {
+			return true;
+		}
+	}
+	return false;
+}
+
 //int numVerticies(Graph g);
-//
-//
-///*
-//* Returns a list of adjacent vertices
-//* on outgoing edges from a given vertex.
-//**/
-//AdjList outIncident(Graph g, Vertex v);
-///*
-//
+
+/* Returns a list of adjacent vertices
+on outgoing edges from a given vertex.
+*/
+AdjList outIncident(Graph g, Vertex v) {
+	//AdjList outV;
+	//int i = 0, j = 0;
+	//adjListNode *p = &g->adj[v];
+	//while (p->next != NULL) {
+	//	i++;
+	//}
+	//p = &g->adj[v];
+	//outV = malloc(sizeof(adjListNode)*i);
+	//for (j = 0; j < i; j++) {
+	//	outV[j] = 
+	//}
+	return g->adj[v].next;
+}
+
 //* Returns a list of adjacent vertices
 //* on incoming edges from a given vertex.
 //**/
