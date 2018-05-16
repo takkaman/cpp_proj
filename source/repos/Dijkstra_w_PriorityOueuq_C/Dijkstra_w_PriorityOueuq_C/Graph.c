@@ -60,30 +60,40 @@ bool adjacent(Graph g, Vertex src, Vertex dest) {
 	return false;
 }
 
-//int numVerticies(Graph g);
+int numVerticies(Graph g) {
+	return g->vNum;
+}
 
 /* Returns a list of adjacent vertices
 on outgoing edges from a given vertex.
 */
 AdjList outIncident(Graph g, Vertex v) {
-	//AdjList outV;
-	//int i = 0, j = 0;
-	//adjListNode *p = &g->adj[v];
-	//while (p->next != NULL) {
-	//	i++;
-	//}
-	//p = &g->adj[v];
-	//outV = malloc(sizeof(adjListNode)*i);
-	//for (j = 0; j < i; j++) {
-	//	outV[j] = 
-	//}
 	return g->adj[v].next;
 }
 
-//* Returns a list of adjacent vertices
-//* on incoming edges from a given vertex.
-//**/
-//AdjList inIncident(Graph g, Vertex v);
-//
+/* Returns a list of adjacent vertices
+on incoming edges from a given vertex.
+*/
+AdjList inIncident(Graph g, Vertex v) {
+	AdjList p, q, result = NULL;
+	int i;
+	for (i = 0; i < numVerticies(g); i++) {
+		if (i == v) continue;
+		p = &g->adj[i];
+		while (p->next != NULL) {
+			if (p->next->w == v) {
+				q = malloc(sizeof(adjListNode));
+				q->w = i;
+				q->weight = p->next->weight;
+				q->next = result;
+				result = q;
+				break;
+			}
+			p = p->next;
+		}
+	}
+	return result;
+}
+
 //void  showGraph(Graph g);
 //void  freeGraph(Graph g);
