@@ -1,3 +1,3 @@
 ﻿  DigitRain.cpp
-d:\work\projects\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(168): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-  DigitRain.vcxproj -> D:\work\projects\cpp_proj\source\repos\DigitRain\Debug\DigitRain.exe
+c:\workspace\learning\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(174): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  DigitRain.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\DigitRain\Debug\DigitRain.exe
