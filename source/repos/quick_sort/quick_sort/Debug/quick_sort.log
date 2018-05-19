@@ -1,4 +1,0 @@
-﻿  quick_sort.cpp
-d:\work\projects\cpp_proj\source\repos\quick_sort\quick_sort\quick_sort.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
-d:\work\projects\cpp_proj\source\repos\quick_sort\quick_sort\quick_sort.cpp(11): warning C4101: “j”: 未引用的局部变量
-  quick_sort.vcxproj -> D:\work\projects\cpp_proj\source\repos\quick_sort\Debug\quick_sort.exe

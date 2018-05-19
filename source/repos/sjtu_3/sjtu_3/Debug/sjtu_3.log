@@ -1,5 +1,0 @@
-﻿  sjtu_3.cpp
-c:\workspace\learning\cpp_proj\source\repos\sjtu_3\sjtu_3\sjtu_3.cpp(14): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-c:\workspace\learning\cpp_proj\source\repos\sjtu_3\sjtu_3\sjtu_3.cpp(22): warning C4244: 'return': conversion from '__int64' to 'int', possible loss of data
-c:\workspace\learning\cpp_proj\source\repos\sjtu_3\sjtu_3\sjtu_3.cpp(59): warning C4244: 'argument': conversion from '__int64' to 'long', possible loss of data
-  sjtu_3.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\sjtu_3\Debug\sjtu_3.exe
