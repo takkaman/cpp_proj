@@ -1,6 +1,0 @@
-﻿  pat_a_1021.cpp
-d:\work\projects\cpp_proj\source\repos\pat_a_1021\pat_a_1021\pat_a_1021.cpp(35): warning C4018: “<”: 有符号/无符号不匹配
-d:\work\projects\cpp_proj\source\repos\pat_a_1021\pat_a_1021\pat_a_1021.cpp(59): warning C4018: “<”: 有符号/无符号不匹配
-d:\work\projects\cpp_proj\source\repos\pat_a_1021\pat_a_1021\pat_a_1021.cpp(77): warning C4018: “<”: 有符号/无符号不匹配
-d:\work\projects\cpp_proj\source\repos\pat_a_1021\pat_a_1021\pat_a_1021.cpp(44): warning C4101: “h”: 未引用的局部变量
-  pat_a_1021.vcxproj -> D:\work\projects\cpp_proj\source\repos\pat_a_1021\Debug\pat_a_1021.exe

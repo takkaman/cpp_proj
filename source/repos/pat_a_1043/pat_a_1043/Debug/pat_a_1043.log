@@ -1,6 +1,0 @@
-﻿  pat_a_1043.cpp
-c:\workspace\learning\cpp_proj\source\repos\pat_a_1043\pat_a_1043\pat_a_1043.cpp(117): warning C4018: '<': signed/unsigned mismatch
-c:\workspace\learning\cpp_proj\source\repos\pat_a_1043\pat_a_1043\pat_a_1043.cpp(119): warning C4018: '<': signed/unsigned mismatch
-c:\workspace\learning\cpp_proj\source\repos\pat_a_1043\pat_a_1043\pat_a_1043.cpp(129): warning C4018: '<': signed/unsigned mismatch
-c:\workspace\learning\cpp_proj\source\repos\pat_a_1043\pat_a_1043\pat_a_1043.cpp(131): warning C4018: '<': signed/unsigned mismatch
-  pat_a_1043.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\pat_a_1043\Debug\pat_a_1043.exe

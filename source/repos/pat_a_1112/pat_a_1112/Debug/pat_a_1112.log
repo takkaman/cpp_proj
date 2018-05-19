@@ -1,4 +1,0 @@
-﻿  pat_a_1112.cpp
-c:\workspace\learning\cpp_proj\source\repos\pat_a_1112\pat_a_1112\pat_a_1112.cpp(21): warning C4018: '<=': signed/unsigned mismatch
-c:\workspace\learning\cpp_proj\source\repos\pat_a_1112\pat_a_1112\pat_a_1112.cpp(47): warning C4018: '<': signed/unsigned mismatch
-  pat_a_1112.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\pat_a_1112\Debug\pat_a_1112.exe
