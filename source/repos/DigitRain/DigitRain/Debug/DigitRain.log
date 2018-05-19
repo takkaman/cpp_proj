@@ -1,3 +1,4 @@
 ﻿  DigitRain.cpp
-c:\workspace\learning\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(174): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\workspace\learning\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(185): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\workspace\learning\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(219): warning C4244: '=': conversion from 'time_t' to 'int', possible loss of data
   DigitRain.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\DigitRain\Debug\DigitRain.exe
