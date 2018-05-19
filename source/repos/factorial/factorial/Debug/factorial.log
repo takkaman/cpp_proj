@@ -1,3 +1,0 @@
-﻿  factorial.cpp
-c:\workspace\learning\cpp_proj\source\repos\factorial\factorial\factorial.cpp(43): warning C4018: '<': signed/unsigned mismatch
-  factorial.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\factorial\Debug\factorial.exe

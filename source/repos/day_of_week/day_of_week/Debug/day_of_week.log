@@ -1,7 +1,0 @@
-﻿  stdafx.cpp
-  day_of_week.cpp
-c:\workspace\learning\cpp_proj\source\repos\day_of_week\day_of_week\day_of_week.cpp(117): warning C4101: 'end_year': unreferenced local variable
-c:\workspace\learning\cpp_proj\source\repos\day_of_week\day_of_week\day_of_week.cpp(117): warning C4101: 'delta': unreferenced local variable
-c:\workspace\learning\cpp_proj\source\repos\day_of_week\day_of_week\day_of_week.cpp(117): warning C4101: 'start_year': unreferenced local variable
-  LINK : C:\workspace\learning\cpp_proj\source\repos\day_of_week\Debug\day_of_week.exe not found or not built by the last incremental link; performing full link
-  day_of_week.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\day_of_week\Debug\day_of_week.exe
