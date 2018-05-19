@@ -1,0 +1,10 @@
+﻿  time_diff.c
+c:\workspace\learning\cpp_proj\source\repos\time_diff\time_diff\time_diff.c(8): warning C4101: 'diff_t': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\time_diff\time_diff\time_diff.c(9): warning C4101: 'hour': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\time_diff\time_diff\time_diff.c(7): warning C4101: 'p': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\time_diff\time_diff\time_diff.c(7): warning C4101: 'q': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\time_diff\time_diff\time_diff.c(9): warning C4101: 'min': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\time_diff\time_diff\time_diff.c(9): warning C4101: 'day': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\time_diff\time_diff\time_diff.c(9): warning C4101: 'sec': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\time_diff\time_diff\time_diff.c(11): warning C4101: 'str': unreferenced local variable
+  time_diff.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\time_diff\Debug\time_diff.exe
