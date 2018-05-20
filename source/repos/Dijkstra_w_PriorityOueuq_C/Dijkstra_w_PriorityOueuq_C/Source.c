@@ -12,18 +12,33 @@ int main() {
 	insertEdge(g, 0, 2, 22);
 	insertEdge(g, 0, 3, 33);
 
-	PQ pq = newPQ();
-	ItemPQ itm;
+	PQ pq = newPQ(), temp;
+	ItemPQ itm, dq;
 	itm.key = 1;
-	itm.value = 3;
+	itm.value = 8;
 	addPQ(pq, itm);
 	itm.key = 2;
-	itm.value = 4;
+	itm.value = 6;
 	addPQ(pq, itm);
+	itm.key = 3;
+	itm.value = 7;
+	addPQ(pq, itm);
+	itm.value = 9;
+	updatePQ(pq, itm);
 	//printf("key: %d, val: %d\n", itm.key, itm.value);
-	while (pq->next != NULL) {
-		printf("key: %d, val: %d\n", pq->next->itm.key, pq->next->itm.value);
-		pq = pq->next;
+	temp = pq;
+	while (temp->next != NULL) {
+		printf("key: %d, val: %d\n", temp->next->itm.key, temp->next->itm.value);
+		temp = temp->next;
+	}
+	while (!PQEmpty(pq)) {
+		dq = dequeuePQ(pq);
+		printf("Dequeue key: %d, val: %d\n", dq.key, dq.value);
+		temp = pq;
+		while (temp->next != NULL) {
+			printf("key: %d, val: %d\n", temp->next->itm.key, temp->next->itm.value);
+			temp = temp->next;
+		}
 	}
 	
 	//printf("Init List\n");
