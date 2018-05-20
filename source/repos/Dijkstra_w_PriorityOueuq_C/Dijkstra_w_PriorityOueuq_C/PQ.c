@@ -15,7 +15,7 @@ If an item with 'key' exists, it's 'value' is updated.
 */
 void addPQ(PQ pq, ItemPQ itm) {
 	PQ node, temp = pq;
-	while (temp->next != NULL && temp->next->itm.value <= itm.value) {
+	while (temp->next != NULL && temp->next->itm.key != itm.key && temp->next->itm.value <= itm.value) {
 		temp = temp->next;
 	}
 	if (temp->next == NULL) {
@@ -23,6 +23,9 @@ void addPQ(PQ pq, ItemPQ itm) {
 		node->itm = itm;
 		node->next = NULL;
 		temp->next = node;
+	}
+	else if (temp->next->itm.key == itm.key) {
+		temp->next->itm.value = itm.value;
 	}
 	else {
 		node = malloc(sizeof(PQRep) * 1);
@@ -50,9 +53,11 @@ void updatePQ(PQ pq, ItemPQ itm) {
 	while (temp->next != NULL && temp->next->itm.key != itm.key) {
 		temp = temp->next;
 	}
-	q = temp->next;
-	temp->next= temp->next->next;
-	addPQ(pq, itm);
+	if (temp->next != NULL) { // found vertex to update
+		q = temp->next;
+		temp->next = temp->next->next;
+		addPQ(pq, itm);
+	}
 }
 
 int PQEmpty(PQ pq) {
