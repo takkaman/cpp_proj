@@ -1,6 +1,7 @@
 // Graph ADT interface for Ass2 (COMP2521)
 #include <stdbool.h>
-
+#ifndef _CS2521_GRAPH_H
+#define _CS2521_GRAPH_H
 //vertices are ints
 typedef int Vertex;
 
@@ -12,11 +13,12 @@ typedef struct _adjListNode {
 
 typedef adjListNode* AdjList;
 
-struct GraphRep {
+typedef struct GraphRep {
 	AdjList adj;
 	int vNum;
 	int eNum;
 }GraphRep;
+
 typedef struct GraphRep *Graph;
 
 Graph newGraph(int noNodes);
@@ -36,5 +38,6 @@ on incoming edges from a given vertex.
 */
 AdjList inIncident(Graph g, Vertex v);
 
-//void  showGraph(Graph g);
-//void  freeGraph(Graph g);
+void  showGraph(Graph g);
+void  freeGraph(Graph g);
+#endif

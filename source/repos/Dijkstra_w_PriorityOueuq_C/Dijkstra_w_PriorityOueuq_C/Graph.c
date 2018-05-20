@@ -61,14 +61,16 @@ bool adjacent(Graph g, Vertex src, Vertex dest) {
 }
 
 int numVerticies(Graph g) {
-	return g->vNum;
+	int i = g->vNum;
+	return i;
 }
 
 /* Returns a list of adjacent vertices
 on outgoing edges from a given vertex.
 */
 AdjList outIncident(Graph g, Vertex v) {
-	return g->adj[v].next;
+	AdjList p = g->adj[v].next;
+	return p;
 }
 
 /* Returns a list of adjacent vertices
@@ -95,5 +97,8 @@ AdjList inIncident(Graph g, Vertex v) {
 	return result;
 }
 
-//void  showGraph(Graph g);
-//void  freeGraph(Graph g);
+void  showGraph(Graph g) {
+}
+
+void  freeGraph(Graph g) {
+}

@@ -11,39 +11,53 @@ int main() {
 	insertEdge(g, 0, 1, 11);
 	insertEdge(g, 0, 2, 22);
 	insertEdge(g, 0, 3, 33);
+
+	PQ pq = newPQ();
+	ItemPQ itm;
+	itm.key = 1;
+	itm.value = 3;
+	addPQ(pq, itm);
+	itm.key = 2;
+	itm.value = 4;
+	addPQ(pq, itm);
+	//printf("key: %d, val: %d\n", itm.key, itm.value);
+	while (pq->next != NULL) {
+		printf("key: %d, val: %d\n", pq->next->itm.key, pq->next->itm.value);
+		pq = pq->next;
+	}
 	
-	printf("Init List\n");
-	for (i = 0; i < numVerticies(g); i++) {
-		printf("Vertex: %d\n", g->adj[i].w);
-	}
+	//printf("Init List\n");
+	//for (i = 0; i < numVerticies(g); i++) {
+	//	printf("Vertex: %d\n", g->adj[i].w);
+	//}
 
-	printf("Scan List\n");
-	p = &g->adj[0];
-	while (p != NULL) {
-		printf("node: %d, weight: %d\n", p->w, p->weight);
-		p = p->next;
-	}
-	removeEdge(g, 0, 2);
-	p = &g->adj[0];
-	printf("Remove List\n");
-	while (p->next != NULL) {
-		printf("Node: %d, weight: %d\n", p->next->w, p->next->weight);
-		p = p->next;
-	}
+	//printf("Scan List\n");
+	//p = &g->adj[0];
+	//while (p != NULL) {
+	//	printf("node: %d, weight: %d\n", p->w, p->weight);
+	//	p = p->next;
+	//}
+	//removeEdge(g, 0, 2);
+	//p = &g->adj[0];
+	//printf("Remove List\n");
+	//while (p->next != NULL) {
+	//	printf("Node: %d, weight: %d\n", p->next->w, p->next->weight);
+	//	p = p->next;
+	//}
 
-	printf("Out Inc\n");
-	p = outIncident(g, 0);
-	while (p != NULL) {
-		printf("Node: %d, weight: %d\n", p->w, p->weight);
-		p = p->next;
-	}
+	//printf("Out Inc\n");
+	//p = outIncident(g, 0);
+	//while (p != NULL) {
+	//	printf("Node: %d, weight: %d\n", p->w, p->weight);
+	//	p = p->next;
+	//}
 
-	printf("In Inc\n");
-	p = inIncident(g, 1);
-	while (p != NULL) {
-		printf("Node: %d, weight: %d\n", p->w, p->weight);
-		p = p->next;
-	}
+	//printf("In Inc\n");
+	//p = inIncident(g, 1);
+	//while (p != NULL) {
+	//	printf("Node: %d, weight: %d\n", p->w, p->weight);
+	//	p = p->next;
+	//}
 	system("pause");
 	return 0;
 }
