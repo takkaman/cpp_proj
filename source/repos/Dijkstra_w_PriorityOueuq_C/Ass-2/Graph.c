@@ -2,11 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct GraphRep {
+	AdjList adj;
+	int vNum;
+	int eNum;
+}GraphRep;
+
 Graph newGraph(int noNodes) {
 	Graph g = malloc(sizeof(Graph)*1);
 	int i;
 	g->adj = malloc(sizeof(adjListNode)*noNodes);
-	g->vNum = noNodes;
+	g->vNum = 0;
 	for (i = 0; i < noNodes; i++) {
 		g->adj[i].w = i;
 		g->adj[i].weight = 0;
@@ -34,6 +40,8 @@ void insertEdge(Graph g, Vertex src, Vertex dest, int weight) {
 	d->w = dest;
 	d->weight = weight;
 	d->next = NULL;
+	if (g->vNum < src + 1) g->vNum = src + 1;
+	if (g->vNum < dest + 1) g->vNum = dest + 1;
 	while (p->next != NULL) {
 		p = p->next;
 	}

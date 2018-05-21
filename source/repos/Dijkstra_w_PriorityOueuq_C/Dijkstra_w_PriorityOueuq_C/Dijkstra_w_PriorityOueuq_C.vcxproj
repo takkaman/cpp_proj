@@ -118,12 +118,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CentralityMeasures.c" />
     <ClCompile Include="Dijkstra.c" />
     <ClCompile Include="Graph.c" />
     <ClCompile Include="PQ.c" />
     <ClCompile Include="Source.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CentralityMeasures.h" />
     <ClInclude Include="Dijkstra.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="PQ.h" />

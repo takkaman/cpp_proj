@@ -27,6 +27,9 @@
     <ClCompile Include="PQ.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CentralityMeasures.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dijkstra.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PQ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CentralityMeasures.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

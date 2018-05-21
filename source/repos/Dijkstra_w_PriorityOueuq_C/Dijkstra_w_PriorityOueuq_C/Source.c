@@ -4,40 +4,6 @@
 #include "Dijkstra.h"
 #include "PQ.h"
 
-//Graph readGraph(char* file) {
-//	// ugly count
-//	FILE * f = fopen(file, "r");
-//	if (!f) {
-//		fprintf(stderr, "ERROR READING FILE %s\n", file);
-//		return NULL;
-//	}
-//	int lines = 0;
-//	char ch = 0;
-//	while (!feof(f)) { ch = fgetc(f); if (ch == '\n')lines++; }
-//	fclose(f);
-//
-//	//ugly parse
-//	f = fopen(file, "r");
-//	if (!f) {
-//		fprintf(stderr, "ERROR READING FILE %s\n", file);
-//		return NULL;
-//	}
-//	Graph g = newGraph(lines);
-//	int a = 0;
-//	int b = 0;
-//	int c = 0;
-//	int i = 0;
-//	while (i < lines) {
-//		fscanf(f, "%d,", &a);
-//		fscanf(f, "%d,", &b);
-//		fscanf(f, "%d", &c);
-//		insertEdge(g, a, b, c);
-//		i++;
-//	}
-//	fclose(f);
-//	return g;
-//}
-
 void displayShortestPathsStruct(ShortestPaths sps) {
 	int i = 0;
 	printf("Node %d\n", sps.src);

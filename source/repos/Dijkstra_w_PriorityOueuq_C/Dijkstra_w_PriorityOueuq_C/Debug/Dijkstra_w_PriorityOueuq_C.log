@@ -1,4 +1,8 @@
 ﻿  Source.c
-c:\workspace\learning\cpp_proj\source\repos\dijkstra_w_priorityoueuq_c\dijkstra_w_priorityoueuq_c\source.c(65): warning C4101: 'p': unreferenced local variable
-c:\workspace\learning\cpp_proj\source\repos\dijkstra_w_priorityoueuq_c\dijkstra_w_priorityoueuq_c\source.c(66): warning C4101: 'size': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\dijkstra_w_priorityoueuq_c\dijkstra_w_priorityoueuq_c\source.c(31): warning C4101: 'p': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\dijkstra_w_priorityoueuq_c\dijkstra_w_priorityoueuq_c\source.c(32): warning C4101: 'size': unreferenced local variable
+  PQ.c
+  Graph.c
+  Dijkstra.c
+  Generating Code...
   Dijkstra_w_PriorityOueuq_C.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\Dijkstra_w_PriorityOueuq_C\Debug\Dijkstra_w_PriorityOueuq_C.exe

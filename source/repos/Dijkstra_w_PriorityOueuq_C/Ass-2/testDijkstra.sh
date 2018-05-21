@@ -13,7 +13,7 @@ if [ $# -eq 1 ]; then
     echo -e "=========== ${RED}[$i] Output Mismatch${NC} ============"
     diff dijkstraPaths/Dijkstra$i.out output/Dijkstra$i.out
   fi
-  rm output/Dijkstra$i.out
+  # rm output/Dijkstra$i.out
   exit
 fi
 for i in `seq 1 $n`; do
@@ -25,5 +25,5 @@ for i in `seq 1 $n`; do
       echo -e "=========== ${RED}[$i] Output Mismatch${NC} ============"
       diff dijkstraPaths/Dijkstra$i.out output/Dijkstra$i.out
     fi
-    rm output/Dijkstra$i.out
+    # rm output/Dijkstra$i.out
 done
