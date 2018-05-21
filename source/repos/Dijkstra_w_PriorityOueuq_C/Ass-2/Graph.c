@@ -2,12 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct GraphRep {
-	AdjList adj;
-	int vNum;
-	int eNum;
-}GraphRep;
-
 Graph newGraph(int noNodes) {
 	Graph g = malloc(sizeof(Graph)*1);
 	int i;
@@ -104,7 +98,6 @@ AdjList inIncident(Graph g, Vertex v) {
 }
 
 void  showGraph(Graph g) {
-
 }
 
 void  freeGraph(Graph g) {

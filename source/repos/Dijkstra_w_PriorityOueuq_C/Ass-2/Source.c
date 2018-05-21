@@ -38,28 +38,6 @@
 //	return g;
 //}
 
-void displayShortestPathsStruct(ShortestPaths sps) {
-	int i = 0;
-	printf("Node %d\n", sps.src);
-	printf("  Distance\n");
-	for (i = 0; i < sps.noNodes; i++) {
-		if (i == sps.src)
-			printf("    %d : X\n", i);
-		else
-			printf("    %d : %d\n", i, sps.dist[i]);
-	}
-	printf("  Preds\n");
-	for (i = 0; i < sps.noNodes; i++) {
-		printf("    %d : ", i);
-		PredNode* curr = sps.pred[i];
-		while (curr != NULL) {
-			printf("[%d]->", curr->v);
-			curr = curr->next;
-		}
-		printf("NULL\n");
-	}
-}
-
 int main() {
 	Graph g = newGraph(5);
 	AdjList p;
@@ -75,35 +53,32 @@ int main() {
 	insertEdge(g, 3, 4, 1);
 	insertEdge(g, 3, 1, 5);
 
-	for (i = 0; i<numVerticies(g); i++) {
-		ShortestPaths paths = dijkstra(g, i);
-		displayShortestPathsStruct(paths);
-		freeShortestPaths(paths);
+	int src = 3;
+	ShortestPaths sp = dijkstra(g, src);
+	printf("scr: %d\n", sp.src);
+	for (i = 0; i < sp.noNodes; i++) {
+		if (i == sp.src) {
+			printf("dst: %d, cost: X\n", i);
+		}
+		else {
+			printf("dst: %d, cost: %d\n", i, sp.dist[i]);
+		}
 	}
-	//printf("scr: %d\n", sp.src);
-	//for (i = 0; i < sp.noNodes; i++) {
-	//	if (i == sp.src) {
-	//		printf("dst: %d, cost: X\n", i);
-	//	}
-	//	else {
-	//		printf("dst: %d, cost: %d\n", i, sp.dist[i]);
-	//	}
-	//}
-	//PredNode *pn;
-	//for (i = 0; i < g->vNum; i++) {
-	//	printf("%d : ", i);
-	//	if (i == src) {
-	//		printf("NULL\n");
-	//		continue;
-	//	}
+	PredNode *pn;
+	for (i = 0; i < g->vNum; i++) {
+		printf("%d : ", i);
+		if (i == src) {
+			printf("NULL\n");
+			continue;
+		}
 
-	//	pn = sp.pred[i];
-	//	while (pn != NULL) {
-	//		printf("[%d] -> ", pn->v);
-	//		pn = pn->next;
-	//	}
-	//	printf("NULL\n");
-	//}
+		pn = sp.pred[i];
+		while (pn != NULL) {
+			printf("[%d] -> ", pn->v);
+			pn = pn->next;
+		}
+		printf("NULL\n");
+	}
 	//PQ pq = newPQ(), temp;
 	//ItemPQ itm, dq;
 	//itm.key = 1;

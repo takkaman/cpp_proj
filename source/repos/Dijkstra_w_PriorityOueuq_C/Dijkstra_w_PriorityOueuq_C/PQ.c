@@ -49,12 +49,12 @@ ItemPQ dequeuePQ(PQ pq) {
 If item with 'key' does not exist in the queue, no action is taken
 */
 void updatePQ(PQ pq, ItemPQ itm) {
-	PQ temp = pq, q;
+	PQ temp = pq;
 	while (temp->next != NULL && temp->next->itm.key != itm.key) {
 		temp = temp->next;
 	}
 	if (temp->next != NULL) { // found vertex to update
-		q = temp->next;
+		// q = temp->next;
 		temp->next = temp->next->next;
 		addPQ(pq, itm);
 	}
