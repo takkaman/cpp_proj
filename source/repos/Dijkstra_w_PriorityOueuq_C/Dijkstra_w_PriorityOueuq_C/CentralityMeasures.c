@@ -89,14 +89,80 @@ NodeValues closenessCentrality(Graph g){
 	return closeCent;
 }
 
+int calcShortestPaths(NodeValues *betCent, ShortestPaths sp, int src, int dst, int vArr[]) {
+	PredNode *p = sp.pred[dst];
+	//printf("  1st pre node: %d\n", sp.pred[dst]->v);
+	//printf("  1st pre node: %d\n", p->v);
+	if (p == NULL) return 1;
+	int ttl = 0;
+	while (p != NULL) {
+		// printf("  Scan pre node: %d\n", p->v);
+		int subT = calcShortestPaths(betCent, sp, src, p->v, vArr);
+		ttl += subT;
+		if (p->v != src) {
+			vArr[p->v] += subT;
+		}
+		p = p->next;
+	}
+
+	return ttl;
+}
+
 NodeValues betweennessCentrality(Graph g){
-	NodeValues throwAway = {0};
-	return throwAway;
+	NodeValues betCent;
+	int i, j, k, ttl = 0;
+	ShortestPaths sp;
+	betCent.noNodes = g->vNum;
+	betCent.values = malloc(sizeof(double)*betCent.noNodes);
+	int *vArr = malloc(sizeof(int)*betCent.noNodes);
+	for (i = 0; i < betCent.noNodes; i++) {
+		betCent.values[i] = 0;
+	}
+
+	for (i = 0; i < betCent.noNodes; i++) {
+		sp = dijkstra(g, i);
+		// printf("Node %d\n", i);
+		for (j = 0; j < betCent.noNodes; j++) {
+			for (k = 0; k < betCent.noNodes; k++) {
+				vArr[k] = 0;
+			}
+			if (j == i) continue;
+			if (sp.dist[j] == 0) continue;
+			// printf("Scan node %d\n", j);
+			ttl = calcShortestPaths(&betCent, sp, i, j, vArr);
+			// printf("Total %d paths between %d and %d\n", ttl, i, j);
+			for (k = 0; k < betCent.noNodes; k++) {
+				if (k == i || k == j) continue;
+				// printf("Node %d contributes %d\n", k, vArr[k]);
+				double b = (double)vArr[k] / (double)ttl;
+				betCent.values[k] += b;
+			}
+		}
+	}
+
+	//for (i = 0; i < betCent.noNodes; i++) {
+	//	betCent.values[i] = (double) betCent.values[i] / (double) ttl;
+	//}
+
+	return betCent;
 }
 
 NodeValues betweennessCentralityNormalised(Graph g){
-	NodeValues throwAway = {0};
-	return throwAway;
+	NodeValues betCentNorm = betweennessCentrality(g);
+	double min = MAX, max = 0;
+	int i = 0;
+	for (i = 0; i < betCentNorm.noNodes; i++) {
+		if (betCentNorm.values[i] > max) {
+			max = betCentNorm.values[i];
+		}
+		if (betCentNorm.values[i] < min) {
+			min = betCentNorm.values[i];
+		}
+	}
+	for (i = 0; i < betCentNorm.noNodes; i++) {
+		betCentNorm.values[i] = (betCentNorm.values[i] - min) / (max - min);
+	}
+	return betCentNorm;
 }
 
 void showNodeValues(NodeValues values){

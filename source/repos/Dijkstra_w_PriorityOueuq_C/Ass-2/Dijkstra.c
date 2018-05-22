@@ -76,6 +76,11 @@ ShortestPaths dijkstra(Graph g, Vertex v) {
 			p = p->next;
 		}
 	}
+	for (i = 0; i < sp.noNodes; i++) {
+		if (sp.dist[i] == MAX) {
+			sp.dist[i] = 0;
+		}
+	}
 	return sp;
 }
 

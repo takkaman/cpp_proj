@@ -51,11 +51,12 @@ int main() {
 	NodeValues outD = outDegreeCentrality(g);
 	NodeValues inD = inDegreeCentrality(g);
 	NodeValues closeCent = closenessCentrality(g);
+	NodeValues betCent = betweennessCentrality(g);
+	NodeValues betCentNorm = betweennessCentralityNormalised(g);
 	printf("Out: %d, in: %d\n", outD.noNodes, inD.noNodes);
 	for (i = 0; i < numVerticies(g); i++) {
-		printf("Node: %d, out: %lf, in %lf, close: %lf\n", i, outD.values[i], inD.values[i], closeCent.values[i]);
+		printf("Node: %d, out: %lf, in %lf, close: %lf, between: %lf, between norm: %lf\n", i, outD.values[i], inD.values[i], closeCent.values[i], betCent.values[i], betCentNorm.values[i]);
 	}
-
 
 	//printf("scr: %d\n", sp.src);
 	//for (i = 0; i < sp.noNodes; i++) {
