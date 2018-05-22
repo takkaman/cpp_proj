@@ -3,6 +3,7 @@
 #include <stdlib.h>  
 #include "Dijkstra.h"
 #include "PQ.h"
+#include "CentralityMeasures.h"
 
 void displayShortestPathsStruct(ShortestPaths sps) {
 	int i = 0;
@@ -46,6 +47,15 @@ int main() {
 		displayShortestPathsStruct(paths);
 		freeShortestPaths(paths);
 	}
+
+	NodeValues outD = outDegreeCentrality(g);
+	NodeValues inD = inDegreeCentrality(g);
+	printf("Out: %d, in: %d\n", outD.noNodes, inD.noNodes);
+	for (i = 0; i < numVerticies(g); i++) {
+		printf("Node: %d, out: %lf, in %lf\n", i, outD.values[i], inD.values[i]);
+	}
+
+
 	//printf("scr: %d\n", sp.src);
 	//for (i = 0; i < sp.noNodes; i++) {
 	//	if (i == sp.src) {

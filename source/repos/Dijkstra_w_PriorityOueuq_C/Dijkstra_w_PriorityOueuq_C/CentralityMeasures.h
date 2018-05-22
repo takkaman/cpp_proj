@@ -9,8 +9,6 @@ typedef struct NodeValues {
    double* values;
 } NodeValues;
 
-
-
 NodeValues outDegreeCentrality(Graph);
 NodeValues inDegreeCentrality(Graph);
 NodeValues degreeCentrality(Graph); // for undirected graph
