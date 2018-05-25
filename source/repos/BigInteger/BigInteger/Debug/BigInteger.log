@@ -1,0 +1,8 @@
+﻿  solution.c
+c:\workspace\learning\cpp_proj\source\repos\biginteger\biginteger\solution.c(80): warning C4029: declared formal parameter list different from definition
+c:\workspace\learning\cpp_proj\source\repos\biginteger\biginteger\solution.c(98): warning C4474: 'fprintf' : too many arguments passed for format string
+  c:\workspace\learning\cpp_proj\source\repos\biginteger\biginteger\solution.c(98): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\workspace\learning\cpp_proj\source\repos\biginteger\biginteger\solution.c(83): warning C4101: 'k': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\biginteger\biginteger\solution.c(83): warning C4101: 'j': unreferenced local variable
+c:\workspace\learning\cpp_proj\source\repos\biginteger\biginteger\solution.c(113): warning C4101: 'read': unreferenced local variable
+  BigInteger.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\BigInteger\Debug\BigInteger.exe

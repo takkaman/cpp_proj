@@ -1,0 +1,44 @@
+Read the line 95468025257568512977119628845129776544789456
+Printing the list containing the num1(it will be in reversed order)
+9456 4478 7765 5129 2884 1196 2977 6851 2575 8025 9546 
+
+Read the line 64324564257968549721069846352456234
+Printing the list containing the num2(it will be in reversed order)
+6234 5245 8463 1069 4972 9685 4257 2456 0643 
+
+Adding iteration 1:
+Adding 4bit numbers in num1: 9456 and 4bit numbers in num2: 6234 with result: 5690 and carry: 1
+
+Adding iteration 2:
+Adding 4bit numbers in num1: 4478 and 4bit numbers in num2: 5245 with result: 9724 and carry: 0
+
+Adding iteration 3:
+Adding 4bit numbers in num1: 7765 and 4bit numbers in num2: 8463 with result: 6228 and carry: 1
+
+Adding iteration 4:
+Adding 4bit numbers in num1: 5129 and 4bit numbers in num2: 1069 with result: 6199 and carry: 0
+
+Adding iteration 5:
+Adding 4bit numbers in num1: 2884 and 4bit numbers in num2: 4972 with result: 7856 and carry: 0
+
+Adding iteration 6:
+Adding 4bit numbers in num1: 1196 and 4bit numbers in num2: 9685 with result: 881 and carry: 1
+
+Adding iteration 7:
+Adding 4bit numbers in num1: 2977 and 4bit numbers in num2: 4257 with result: 7235 and carry: 0
+
+Adding iteration 8:
+Adding 4bit numbers in num1: 6851 and 4bit numbers in num2: 2456 with result: 9307 and carry: 0
+
+Adding iteration 9:
+Adding 4bit numbers in num1: 2575 and 4bit numbers in num2: 643 with result: 3218 and carry: 0
+
+Adding iteration 10:
+Adding 4bit numbers in num1: 8025 with result: 8025 and carry: 0
+
+Adding iteration 11:
+Adding 4bit numbers in num1: 9546 with result: 9546 and carry: 0
+
+Printing out the result of the addition
+9546 8025 3218 9307 7235 0881 7856 6199 6228 9724 5690 
+
