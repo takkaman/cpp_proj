@@ -5,11 +5,11 @@
 #define MAX 99999999
 #define MAX_PATH 200
 
-//typedef struct GraphRep {
-//	AdjList adj;
-//	int vNum;
-//	int eNum;
-//}GraphRep;
+// typedef struct GraphRep {
+// 	AdjList adj;
+// 	int vNum;
+// 	int eNum;
+// }GraphRep;
 
 ShortestPaths dijkstra(Graph g, Vertex v) {
 	ShortestPaths sp;

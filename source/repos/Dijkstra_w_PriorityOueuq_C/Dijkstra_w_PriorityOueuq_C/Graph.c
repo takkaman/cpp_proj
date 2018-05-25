@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//typedef struct GraphRep {
-//	AdjList adj;
-//	int vNum;
-//	int eNum;
-//}GraphRep;
+// typedef struct GraphRep {
+// 	AdjList adj;
+// 	int vNum;
+// 	int eNum;
+// }GraphRep;
 
 Graph newGraph(int noNodes) {
 	Graph g = malloc(sizeof(Graph)*1);

@@ -6,11 +6,11 @@
 #include <stdio.h>
 #define MAX 99999999
 
-//typedef struct GraphRep {
-//	AdjList adj;
-//	int vNum;
-//	int eNum;
-//}GraphRep;
+// typedef struct GraphRep {
+// 	AdjList adj;
+// 	int vNum;
+// 	int eNum;
+// }GraphRep;
 
 NodeValues outDegreeCentrality(Graph g){
 	NodeValues outD;

@@ -2,10 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//typedef struct PQRep {
-//	ItemPQ itm;
-//	struct PQRep *next;
-//} PQRep;
+// typedef struct PQRep {
+// 	ItemPQ itm;
+// 	struct PQRep *next;
+// } PQRep;
 
 /* Creates new priority queue, that can store items of type ItemPQ.
 */
