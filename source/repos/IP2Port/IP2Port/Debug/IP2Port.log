@@ -1,0 +1,10 @@
+﻿  solution.c
+c:\workspace\learning\cpp_proj\source\repos\ip2port\ip2port\solution.c(7): warning C4013: 'createTrieTreeTable' undefined; assuming extern returning int
+c:\workspace\learning\cpp_proj\source\repos\ip2port\ip2port\solution.c(17): warning C4020: 'search': too many actual parameters
+c:\workspace\learning\cpp_proj\source\repos\ip2port\ip2port\solution.c(19): warning C4013: 'system' undefined; assuming extern returning int
+c:\workspace\learning\cpp_proj\source\repos\ip2port\ip2port\solution.c(7): warning C4047: 'initializing': 'TrieNode *' differs in levels of indirection from 'int'
+  TrieTree.c
+c:\workspace\learning\cpp_proj\source\repos\ip2port\ip2port\trietree.c(529): warning C4013: 'printf' undefined; assuming extern returning int
+c:\workspace\learning\cpp_proj\source\repos\ip2port\ip2port\trietree.c(548): warning C4029: declared formal parameter list different from definition
+  Generating Code...
+  IP2Port.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\IP2Port\Debug\IP2Port.exe
