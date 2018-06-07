@@ -2,7 +2,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 n=`ls graphs/*in | grep -o '[0-9][0-9]*' | sort | tail -n1`
-make || exit
+/c/MinGW/msys/1.0/bin/make || exit
 if [ $# -eq 1 ]; then
   i=$1
   for t in 'di' 'do' 'd' 'c' 'b' 'bn'; do

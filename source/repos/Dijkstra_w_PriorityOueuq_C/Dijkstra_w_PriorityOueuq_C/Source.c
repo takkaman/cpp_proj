@@ -42,21 +42,38 @@ int main() {
 	insertEdge(g, 3, 4, 1);
 	insertEdge(g, 3, 1, 5);
 
-	for (i = 0; i<numVerticies(g); i++) {
-		ShortestPaths paths = dijkstra(g, i);
-		displayShortestPathsStruct(paths);
-		freeShortestPaths(paths);
-	}
+	//insertEdge(g, 0, 1, 2);
+	//insertEdge(g, 1, 0, 2);
+	//insertEdge(g, 2, 1, 1);
+	//insertEdge(g, 0, 2, 1);
+
+	//for (i = 0; i<numVerticies(g); i++) {
+	//	ShortestPaths paths = dijkstra(g, i);
+	//	displayShortestPathsStruct(paths);
+	//	freeShortestPaths(paths);
+	//}
 
 	NodeValues outD = outDegreeCentrality(g);
 	NodeValues inD = inDegreeCentrality(g);
+	NodeValues inoutD = degreeCentrality(g);
 	NodeValues closeCent = closenessCentrality(g);
 	NodeValues betCent = betweennessCentrality(g);
 	NodeValues betCentNorm = betweennessCentralityNormalised(g);
-	printf("Out: %d, in: %d\n", outD.noNodes, inD.noNodes);
-	for (i = 0; i < numVerticies(g); i++) {
-		printf("Node: %d, out: %lf, in %lf, close: %lf, between: %lf, between norm: %lf\n", i, outD.values[i], inD.values[i], closeCent.values[i], betCent.values[i], betCentNorm.values[i]);
-	}
+	//printf("Out: %d, in: %d\n", outD.noNodes, inD.noNodes);
+	//for (i = 0; i < numVerticies(g); i++) {
+	//	printf("Node: %d, out: %lf, in %lf, close: %lf, between: %lf, between norm: %lf\n", i, outD.values[i], inD.values[i], closeCent.values[i], betCent.values[i], betCentNorm.values[i]);
+	//}
+	showNodeValues(outD);
+	printf("\n");
+	showNodeValues(inD);
+	printf("\n");
+	showNodeValues(inoutD);
+	printf("\n");
+	showNodeValues(closeCent);
+	printf("\n");
+	showNodeValues(betCent);
+	printf("\n");
+	showNodeValues(betCentNorm);
 
 	//printf("scr: %d\n", sp.src);
 	//for (i = 0; i < sp.noNodes; i++) {

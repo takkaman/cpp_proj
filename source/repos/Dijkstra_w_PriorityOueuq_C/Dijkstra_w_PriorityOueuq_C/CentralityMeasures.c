@@ -60,8 +60,16 @@ NodeValues inDegreeCentrality(Graph g){
 	return inD;
 }
 NodeValues degreeCentrality(Graph g) {
-	NodeValues throwAway = {0};
-	return throwAway;
+	NodeValues inoutD, inD, outD;
+	int i;
+	inD = inDegreeCentrality(g);
+	outD = outDegreeCentrality(g);
+	inoutD.noNodes = inD.noNodes;
+	inoutD.values = malloc(sizeof(double)*inD.noNodes);
+	for (i = 0; i < inoutD.noNodes; i++) {
+		inoutD.values[i] = inD.values[i] + outD.values[i];
+	}
+	return inoutD;
 }
 
 NodeValues closenessCentrality(Graph g){
@@ -165,8 +173,11 @@ NodeValues betweennessCentralityNormalised(Graph g){
 	return betCentNorm;
 }
 
-void showNodeValues(NodeValues values){
-
+void showNodeValues(NodeValues values) {
+	int i = 0;
+	for (i = 0; i < values.noNodes; i++) {
+		printf("%d: %lf\n", i, values.values[i]);
+	}
 }
 
 void freeNodeValues(NodeValues values){

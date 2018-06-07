@@ -166,7 +166,10 @@ NodeValues betweennessCentralityNormalised(Graph g){
 }
 
 void showNodeValues(NodeValues values){
-
+	int i = 0;
+	for (i = 0; i < values.noNodes; i++) {
+		printf("%d: %lf\n", i, values.values[i]);
+	}
 }
 
 void freeNodeValues(NodeValues values){
