@@ -10,6 +10,10 @@ int main() {
 	while (true) {
 		printf("Please enter IP address:\n");
 		scanf("%d.%d.%d.%d", &i1, &i2, &i3, &i4);
+		if (i1 >= 256 || i2 >= 256 || i3 >= 256 || i4 >= 256) {
+			printf("IP address illegal...\n");
+			continue;
+		}
 		createIP(i1, i2, i3, i4, ip_addr);
 		//char *bin1 = "00101";
 		//char *bin2 = "00001";
