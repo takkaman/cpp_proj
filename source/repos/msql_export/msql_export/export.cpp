@@ -5,29 +5,34 @@
 #include <string>
 #include <iostream>
 #include <stdlib.h>
+#include <stdio.h>
 using namespace std;
 
 #pragma comment(lib,"libmysql.lib")
 
-void exportMySQLTable(const char table[]) {
+void exportMySQLTable(string database, string table) {
 	const char user[] = "root";
 	const char pswd[] = "1234";
 	const char host[] = "localhost";
-	//const char host[] = "47.101.57.53";
-	// const char table[] = "dexin";
+	// const char host[] = "47.101.57.53";
+	// const char database[] = "dexin";
 	unsigned int port = 3306;
+
+	string base_query = "select * from ";
+	string sql_query = base_query + table;
+
 	MYSQL myCont;
 	MYSQL_RES *result;
 	MYSQL_ROW sql_row;
 	int res, num;
 	FILE * output = fopen("output.csv", "w+");
 	mysql_init(&myCont);
-	if (mysql_real_connect(&myCont, host, user, pswd, table, port, NULL, 0))
+	if (mysql_real_connect(&myCont, host, user, pswd, database.c_str(), port, NULL, 0))
 		//if (mysql_real_connect(&myCont, host, user, pswd,0,0,NULL,0))
 	{
 		mysql_query(&myCont, "SET NAMES UTF8"); //set encode
 												//  mysql_select_db(&myCont, table);
-		res = mysql_query(&myCont, "select * from customer");//query
+		res = mysql_query(&myCont, sql_query.c_str());//query
 		if (!res)
 		{
 			result = mysql_store_result(&myCont);
@@ -62,10 +67,12 @@ void exportMySQLTable(const char table[]) {
 	else
 	{
 		cout << "connect failed!" << endl;
+		return;
 	}
 	if (result != NULL)
 		mysql_free_result(result);
 
 	mysql_close(&myCont);
 	fclose(output);
+	return;
 }

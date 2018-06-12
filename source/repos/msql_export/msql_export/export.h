@@ -3,4 +3,4 @@
 #include <string>
 using namespace std;
 
-void exportMySQLTable(const char table[]);
+void exportMySQLTable(string database, string table);
