@@ -18,14 +18,14 @@ void exportMySQLTable(string database, string table) {
 	// const char database[] = "dexin";
 	unsigned int port = 3306;
 
-	string base_query = "select * from ";
-	string sql_query = base_query + table;
-
+	string base_query = "select * from `";
+	string sql_query = base_query + table + "`";
+	string output_file = table + ".csv";
 	MYSQL myCont;
 	MYSQL_RES *result;
 	MYSQL_ROW sql_row;
 	int res, num;
-	FILE * output = fopen("output.csv", "w+");
+	FILE * output = fopen(output_file.c_str(), "w+");
 	mysql_init(&myCont);
 	if (mysql_real_connect(&myCont, host, user, pswd, database.c_str(), port, NULL, 0))
 		//if (mysql_real_connect(&myCont, host, user, pswd,0,0,NULL,0))
