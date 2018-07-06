@@ -10,8 +10,8 @@ int main()
 	int tmp;
 	char str[1];
 	time(&t);      //获取系统日期和时间
-
 	localtime_s(&now, &t);
+	printf("%d %d %d\n", now.tm_year, now.tm_mon, now.tm_mday);
 
 	base.tm_year = 117;
 	base.tm_mon = 4;
@@ -22,9 +22,9 @@ int main()
 
 	//now.tm_year += 1900;
 	//now.tm_mon += 1;
-	tmp = 3 + '0';
+	diff_t = mktime(&now) - mktime(&base);
 	//sprintf_s(str, "%d", 6);
-	printf("%c",tmp);
+	printf("%d", diff_t);
 	//printf("Year: %d, month: %d, day: %d\n", base.tm_year, base.tm_mon, base.tm_mday);
 	//printf("Year: %d, month: %d, day: %d\n", now.tm_year, now.tm_mon, now.tm_mday);
 
