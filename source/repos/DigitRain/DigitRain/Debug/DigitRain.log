@@ -1,4 +1,5 @@
 ﻿  DigitRain.cpp
-d:\work\projects\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(187): warning C4244: “参数”: 从“double”转换到“int”，可能丢失数据
-d:\work\projects\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(223): warning C4244: “=”: 从“time_t”转换到“int”，可能丢失数据
-  DigitRain.vcxproj -> D:\work\projects\cpp_proj\source\repos\DigitRain\Debug\DigitRain.exe
+c:\workspace\learning\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(188): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\workspace\learning\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(225): warning C4244: '=': conversion from 'time_t' to 'int', possible loss of data
+c:\workspace\learning\cpp_proj\source\repos\digitrain\digitrain\digitrain.cpp(224): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double (__cdecl *)(const time_t,const time_t)'
+  DigitRain.vcxproj -> C:\workspace\learning\cpp_proj\source\repos\DigitRain\Debug\DigitRain.exe
